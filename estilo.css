@@ -4,14 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-}
 
 .background {
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     filter: blur(1px);
     animation: sky 20s cubic-bezier(0.67, 0.01, 0.29, 0.99) none infinite alternate
 }
@@ -58,7 +55,6 @@ body {
 
 .card {
     display: flex;
-    width: 600px;
     background-color: #fafafa;
     border-radius: 8px;
     box-shadow: 1px 5px 19px 3px #2e2e2e;
@@ -70,7 +66,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
 }
 
 .card-header, .card-body {
@@ -82,9 +78,11 @@ body {
     display: block;
     position: relative;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     overflow: hidden;
+    outline: 3px solid rgb(122, 130, 143);
+    margin-bottom: 8px;
 }
 
 .card-header a img {
@@ -95,7 +93,7 @@ body {
 
 .card-header h2 {
     white-space: nowrap;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 36px;
     color: #000000;
 }
@@ -110,8 +108,30 @@ body {
     margin-bottom: 8px;
 }
 
-@media screen and (min-width: 700px) {
+.card-body {
+    display: flex;
+    align-items: center;
+}
+
+.card-body .desc {
+    display: flex;
+    gap: 6px;
+    flex-flow: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.desc h1 {
+    margin-bottom: 14px;
+    color: #2e2e2e;
+}
+
+
+@media screen and (min-width: 500px) {
     .card {
         flex-flow: row;
+    }
+    .card-header {
+        border-bottom: none;
+        border-right: 1px solid #e2e2e2;
     }
 }
