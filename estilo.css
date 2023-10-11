@@ -72,6 +72,8 @@
 .card-header, .card-body {
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-header a {
@@ -125,6 +127,34 @@
     color: #2e2e2e;
 }
 
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    justify-content: center;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    color: #234d30;
+    border: 2px solid #b0ccbb;
+    font-size: 18px;
+    margin: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #b0ccbb;
+    padding: 6px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.social a:hover {
+    background-color: #dfeee5;
+    border: 2px solid #b0ccbb;
+}
 
 @media screen and (min-width: 500px) {
     .card {
